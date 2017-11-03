@@ -99,7 +99,7 @@ def proxNorm(X,lamda):
         Y=np.zeros(100,100)
     return Y
 
-def ccaTraceLassoSub(X,y,lamda,mu,u):
+def ccaLassoSub(X,y,lamda,mu,u):
     n,q=X.shape
     r=15;s=15;t=15;
     J0=np.random.random((n,q));p0=np.random.random((n,1));m0=np.random.random((q,1));
@@ -132,7 +132,7 @@ def ccaTraceLassoSub(X,y,lamda,mu,u):
 
 
 
-def ccaTraceLasso(xArr, yArr, lamda1, lamda2, mu1, mu2):
+def ccaLasso(xArr, yArr, lamda1, lamda2, mu1, mu2):
     dataMatX = np.mat(xArr);dataMatY = np.mat(yArr)
     n, p = dataMatX.shape;n, q = dataMatY.shape
     u0 = np.random.random((p, 1));v0 = np.random.random((q, 1));k = 1
